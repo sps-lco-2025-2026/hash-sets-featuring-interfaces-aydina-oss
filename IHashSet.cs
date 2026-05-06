@@ -14,4 +14,30 @@
         string Year { get; }
         string Tutor { get; }
     }
+    public class Student : SPSStudent
+    {
+        public string Name {get;}
+        public string Year { get; }
+        public string Tutor { get;}
+
+        public Student(string name, string year, string tutor)
+        {
+            Name = name;
+            Year = year;
+            Tutor = tutor;
+        }
+        
+        public override string ToString()
+        {
+            return $"{Name} + {Year} + {Tutor}";
+        }
+
+        public override int GetHashCode()
+        {
+            return ToString().GetHashCode();
+        }
+        
+
+
+    }
 }
